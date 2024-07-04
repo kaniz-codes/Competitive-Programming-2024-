@@ -1,0 +1,22 @@
+
+#include <stdio.h>
+int main() {
+    int t,i;
+    char A, B, C, D, E, F;
+    scanf("%d", &t);
+    for (i=0; i<t; i++)
+    {
+        scanf(" %c %c %c %c %c %c", &A, &B, &C, &D, &E, &F);
+        if ((A == 'W' && B == 'W' && C == 'W') ||
+            (B == 'W' && C == 'W' && D == 'W') ||
+            (C == 'W' && D == 'W' && E == 'W') ||
+            (D == 'W' && E == 'W' && F == 'W'))
+            { printf("YES\n");}
+        else
+        {
+            printf("NO\n");
+        }
+    }
+
+    return 0;
+}
