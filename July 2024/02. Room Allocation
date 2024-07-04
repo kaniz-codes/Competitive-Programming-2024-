@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);  // Read the number of test cases
+
+    for (int t = 0; t < T; t++) {
+        int N;
+        scanf("%d", &N);  // Read the number of colleges
+
+        int total_rooms = 0;
+        for (int i = 0; i < N; i++) {
+            int students;
+            scanf("%d", &students);  // Read the number of students from each college
+
+            // Calculate the number of rooms needed for this college
+            total_rooms += (students + 1) / 2;  // (students + 1) / 2 rounds up for odd numbers
+        }
+
+        printf("%d\n", total_rooms);  // Output the total number of rooms needed
+    }
+
+    return 0;
+}
